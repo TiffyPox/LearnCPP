@@ -11,7 +11,11 @@ int main()
 
 	while (getline(std::cin, line)) // read input a line at a time until end-of-file
 	{
-		std::cout << line << std::endl;
+		// if the string is not empty
+		if (!line.empty())
+		{
+			std::cout << line << std::endl;
+		}
 	}
 
 	return 0;
