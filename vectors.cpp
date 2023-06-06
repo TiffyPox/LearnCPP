@@ -18,13 +18,13 @@ int main()
 	// give ivec some values:
 	std::vector<int> ivec2(ivec); // copy elements of ivec into ivec2
 	std::vector<int> ivec3 = ivec; // copy elements of ivec into ivec3
-	std::vector<string> svec(ivec2); // error: svec holds strings, not ints
+	std::vector<std::string> svec(ivec2); // error: svec holds strings, not ints
 
 	// another way to provide element values:
-	std::vector<string> songs = {"Poke", "Holy", "Snake"};
+	std::vector<std::string> songs = {"Poke", "Holy", "Snake"};
 
 	// list initialization:
-	std::vector<string> a1{"Painting of a Panic Attack", "Pedestrian Verse", "The Midnight Organ Fight"};
+	std::vector<std::string> a1{"Painting of a Panic Attack", "Pedestrian Verse", "The Midnight Organ Fight"};
 
 	// we can also initialize a vector from a count and an element value:
 	std::vector<int> i(10, -1); // ten int elements, each initialized to -1
