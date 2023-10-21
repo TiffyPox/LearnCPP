@@ -51,8 +51,6 @@ int main()
 
 		return -1; // indicate failure
 	}
-	else
-	{
-		std::cerr << "Please enter a valid value" << std::endl;
-	}
+	
+	std::cerr << "Please enter a valid value" << std::endl;
 }

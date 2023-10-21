@@ -2,6 +2,11 @@
 #include <ostream>
 #include <cstdlib>
 
+int get_size()
+{
+	return 0;
+}
+
 int main()
 {
 	/*
