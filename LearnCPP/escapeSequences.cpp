@@ -6,7 +6,7 @@ int main()
 
     char a = 84;
 
-    std::cout << "\x48\x49 " << a << "\127\111" << a << a << "\x45\x52" << std::endl;
+    std::cout << "\n\x48\x49 " << a << "\127\111" << a << a << "\x45\x52" << std::endl;
 
     return 0;
 }
