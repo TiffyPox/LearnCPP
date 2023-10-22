@@ -8,5 +8,8 @@ int main()
 
     std::cout << "\n\x48\x49 " << a << "\127\111" << a << a << "\x45\x52" << std::endl;
 
+    // write a program that prints 2 followed by a tab, then M and then a new line
+    std::cout << "\x32\t\x4D" << std::endl;
+
     return 0;
 }
