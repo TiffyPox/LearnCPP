@@ -10,11 +10,11 @@ int main()
 
     // floating-point literals include either a decimal point or using scientific notation (E or e)
 
-    int d = 2.1234;
-    int e = 2.1234E0;
-    int f = 2.;
-    int g = 2e2;
-    int h = .001;
+    float d = 2.1234f;
+    float e = 2.1234E0f;
+    float f = 2.f;
+    float g = 0e0f;
+    float h = .001f;
 
     return 0;
 }
