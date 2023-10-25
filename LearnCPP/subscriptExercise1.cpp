@@ -25,17 +25,17 @@ int main()
 
 	// Using a char as a loop control variable:
 
-	// std::string inputTwo;
+	std::string inputTwo;
 
-	// while (getline(std::cin, inputTwo))
-	// {
-	// 	for (auto &c : inputTwo)
-	// 	{
-	// 		c = 'X';
-	// 	}
+	while (getline(std::cin, inputTwo))
+	{
+		for (auto &c : inputTwo)
+		{
+			c = 'X';
+		}
 
-	// 	std::cout << inputTwo << std::endl;
-	// }
+		std::cout << inputTwo << std::endl;
+	}
 
 	return 0;
 }

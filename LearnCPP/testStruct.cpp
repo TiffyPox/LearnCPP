@@ -17,7 +17,7 @@ int main()
     player playerOne;
 
     std::cout << "Welcome Adventurer! What's your name?" << std::endl;
-
+    
     std::cin >> playerOne.name;
 
     std::cout << "Hello, " << playerOne.name << "\nPlease pick a number between 1-100:" << std::endl;
