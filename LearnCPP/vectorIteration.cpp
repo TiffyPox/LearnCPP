@@ -20,7 +20,7 @@ int main()
 
 	// the compiler determines the type of b and e from whatever type is returned from the begin and end members
 	auto b = s.begin(); // denotes the first element
-	auto e = s.end(); // denotes one past the last element in v
+	auto e = s.end(); // denotes one past the last element in s
 
 	// if the container is empty, the iterators returned by begin and end are equal - they are both off-the-end iterators
 
