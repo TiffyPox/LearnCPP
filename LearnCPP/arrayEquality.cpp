@@ -23,7 +23,7 @@ int main()
     // Write a program to compare two arrays for equality
 
     std::array <int, 3> a{ 1, 2, 3 };
-    std::array <int, 3> b{ 1, 2, 7 };
+    std::array <int, 3> b{ 2, 3, 4 };
     
     iterateArray(a);
     iterateArray(b);
@@ -34,7 +34,7 @@ int main()
     }
     else
     {
-        std::cout << "\nArrays are equal" << std::endl;
+        std::cout << "Arrays are equal" << std::endl;
     }
 
     return 0;
