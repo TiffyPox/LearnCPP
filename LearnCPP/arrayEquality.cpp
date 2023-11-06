@@ -1,7 +1,7 @@
 #include <iostream>
 #include <array>
 
-int iterateArray(std::array<int, 3> arr)
+void iterateArray(std::array<int, 3> arr)
 {
     for (auto i = arr.begin(); i != arr.end(); i++)
     {
