@@ -73,7 +73,7 @@ int main()
 
     const char *str = s.c_str();
 
-    std::cout << *str;
+    std::cout << *str << std::endl;
     
     return 0;
 }
