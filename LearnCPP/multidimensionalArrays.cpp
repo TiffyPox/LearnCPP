@@ -11,5 +11,29 @@ int main()
 
     // in a two dimension array, the first dimension is referred to as the row, and the second as the column
 
+    constexpr size_t rowCnt = 3;
+    constexpr size_t colCnt = 4;
+
+    int rc[3] [4] = 
+    {
+        {0, 1, 2, 3},
+        {4, 5, 6, 7},
+        {8, 9, 10, 11}
+    };
+
+    int ia[rowCnt] [colCnt]; // 12 uninitialized elements
+
+    // p points to an array of 4 ints
+    for (auto p = ia; p != ia + 3; p++)
+    {
+        // q points to the first element of an array of 4 ints, that is, q points to an int
+        for (auto q = *p; q != *p + 4; q++)
+        {
+            std::cout << *q << ' ';
+        }
+
+        std::cout << std::endl;
+    }
+
     return 0;
 }
