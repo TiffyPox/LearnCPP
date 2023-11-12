@@ -21,7 +21,6 @@ int main()
         {8, 9, 10, 11}
     };
 
-
     int ia[rowCnt] [colCnt]; // 12 uninitialized elements
 
     // p points to an array of 4 ints
