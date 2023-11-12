@@ -21,6 +21,7 @@ int main()
         {8, 9, 10, 11}
     };
 
+
     int ia[rowCnt] [colCnt]; // 12 uninitialized elements
 
     // p points to an array of 4 ints
@@ -30,6 +31,17 @@ int main()
         for (auto q = *p; q != *p + 4; q++)
         {
             std::cout << *q << ' ';
+        }
+
+        std::cout << std::endl;
+    }
+
+    // using the library begin and end functions
+    for (auto r = std::begin(ia); r != std::end(ia); r++)
+    {
+        for (auto s = std::begin(*r); s != std::end(*r); s++)
+        {
+            std::cout << 'X' << ' ';
         }
 
         std::cout << std::endl;
