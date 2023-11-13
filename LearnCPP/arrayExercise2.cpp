@@ -27,7 +27,7 @@ int main()
     }
 
     // using a pointer
-    for (int (*p)[3] = ia; p < std::end(ia); p++)
+    for (int (*p)[3] = ia; p != std::end(ia); p++)
     {
         for (int (*q) = *p; q != std::end(*p); q++)
         {
