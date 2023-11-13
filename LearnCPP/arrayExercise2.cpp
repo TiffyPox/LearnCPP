@@ -3,18 +3,35 @@
 
 int main()
 {
-    // using a range for
-    size_t cnt = 0;
+    int ia[2][3]{ 0 };
 
-    int ia[2] [3];
-
-    for (auto &row : ia) // for every element in the outer array
+    for (int i = 0; i < 2; i++) // for every element in the outer array
     {
-        for (auto &col : row) // for every element in the inner array
+        for (int j = 0; j < 3; j++) // for every element in the inner array
         {
-            col = cnt;
-            std::cout << cnt << ' ';
-            cnt++;
+            std::cout << ia[i][j] << ' ';
+        }
+
+        std::cout << std::endl;
+    }
+
+    // using a range for
+    for (int (&row)[3] : ia)
+    {
+        for (int col : row)
+        {
+            std::cout << col << ' ';
+        }
+
+        std::cout << std::endl;
+    }
+
+    // using a pointer
+    for (int (*p)[3] = ia; p < std::end(ia); p++)
+    {
+        for (int (*q) = *p; q != std::end(*p); q++)
+        {
+            std::cout << *q << ' ';
         }
 
         std::cout << std::endl;
