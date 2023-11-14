@@ -37,5 +37,29 @@ int main()
         std::cout << std::endl;
     }
 
+    // using a type alias
+    typedef int int_arr[3];
+    
+    for (int_arr *r = ia; r != ia + 2; r++)
+    {
+        for (int *s = *r; s != *r + 3; s++)
+        {
+            std::cout << *s << ' ';
+        }
+        
+        std::cout << std::endl;
+    }
+
+    // using auto
+    for (const auto &row : ia)
+    {
+        for (auto col : row)
+        {
+            std::cout << col << ' ';
+        }
+
+        std::cout << std::endl;
+    }
+
     return 0;
 }
