@@ -2,7 +2,6 @@
 
 int main()
 {
-
     int number = 0;
 
     std::cout << "Please give me a positive number!" << std::endl;
