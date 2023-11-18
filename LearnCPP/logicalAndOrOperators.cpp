@@ -4,7 +4,7 @@
 int main()
 {
     // the logical AND and OR operators always evaluate their left operand before the right
-    // moreover, the right operand is evaluated if and only if the left operand does not detemine the result
+    // the right operand is evaluated if and only if the left operand does not determine the result
 
     std::string text = "Hello World How Are You?";
 
