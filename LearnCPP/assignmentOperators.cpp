@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <string>
 
 int main()
 {
@@ -22,6 +23,23 @@ int main()
     k = {5};
     std::vector<int> nums; // initially empty
     nums = {0, 1, 2, 3, 4, 5}; // nums now has 6 elements, values 0 through 5
+
+    // unlike the other binary operators, assignment is right associative
+    int ival;
+    int jval;
+
+    int ival = jval = 0; // ok: each assigned 0
+
+    // the right-most assignment, jval = 0 is the right-hand operand of the left-most assignment operator
+    // because assignment returns its left-hand operand, the result of the right-most assignment (jval) is assigned to ival
+
+    // each object in a multiple assignment must have the same type as its right-hand operand
+    // or a type to which that neighbour can be converted
+
+    std::string s1;
+    std::string s2;
+
+    s1 = s2 = "Ok"; // string literaal "Ok" converted to string
 
     return 0;
 }
