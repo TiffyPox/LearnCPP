@@ -11,15 +11,15 @@ int main()
     std::string *p1 = &s1;
 
     auto n1 = s1.size(); // run the size member of s1
-    n1 = (*p1).size(); // run size on the object to which p points
-    n1 = p1->size(); // equivalent to (*p).size()
+    n1 = (*p1).size(); // run size on the object to which p1 points
+    n1 = p1->size(); // equivalent to (*p1).size()
 
     // because dereference has a lower precedence than dot, we must paranthesize the dereference subexpression
-    // *p.size(); // error: p is a pointer and has no member named size
+    // *p1.size(); // error: p1 is a pointer and has no member named size
 
     /*
-    * this expression attempts to fetch the size member of the object p
-    * however, p is a pointer, which has no members
+    * this expression attempts to fetch the size member of the object p1
+    * however, p1 is a pointer, which has no members
     */
 
     // exercises
@@ -41,7 +41,7 @@ int main()
 
     auto e = text1.empty();
     auto f = text2.empty();
-    
+
     e = iter1->empty();
     f = iter2++->empty();
 
