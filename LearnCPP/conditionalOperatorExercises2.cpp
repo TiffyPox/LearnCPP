@@ -4,7 +4,7 @@
 int main()
 {
     // extending the student grade program using only conditional operators
-    
+
     int grade = 0;
 
     std::cout << "Please provide students grade" << std::endl;
@@ -15,29 +15,6 @@ int main()
                                       : (grade >= 60 && grade < 75) ? "Low Pass"
                                       : (grade < 60) ? "Fail" : "Pass";
     
-    std::cout << result << std::endl;
-
-    // extending the student grade program using if statements
-
-    if (grade > 90)
-    {
-        result = "High Pass";
-    }
-
-    if (grade >= 60 && grade < 75)
-    {
-        result = "Low Pass";
-    }
-    else
-    {
-        result = "Pass";
-    }
-
-    if (grade < 60)
-    {
-        result = "Fail";
-    }
-
     std::cout << result << std::endl;
 
     return 0;
