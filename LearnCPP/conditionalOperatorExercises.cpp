@@ -11,6 +11,9 @@ void doubleOdds(std::vector<int> &v)
 
 int main ()
 {
+    // write a program to use a conditional operator to find the elements in a vector<int>
+    // find the elements that are odd numbers and double the value of each element
+    
     std::vector<int> nums {2, 4, 6, 7, 9, 11};
 
     doubleOdds(nums);
