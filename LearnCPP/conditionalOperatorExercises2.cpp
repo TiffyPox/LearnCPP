@@ -17,5 +17,26 @@ int main()
     
     std::cout << result << std::endl;
 
+    // extending the student grade program using if statements
+
+    if (grade > 90)
+    {
+        result = "High Pass";
+    }
+    else if (grade > 75)
+    {
+        result = "Pass";
+    }
+    else if (grade >= 60 && grade < 75)
+    {
+        result = "Low Pass";
+    }
+    else
+    {
+        result = "Fail";
+    }
+
+    std::cout << result << std::endl;
+
     return 0;
 }
