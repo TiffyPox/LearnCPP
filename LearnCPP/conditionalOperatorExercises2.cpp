@@ -49,11 +49,11 @@ int main()
 
     // and again
 
-    std::vector<std::string> s2 = {"C", "Plus"};
+    std::vector<std::string> s2 = {"C", "Plus", ""};
 
-    std::string language = s2[3] = "" ? (s2[3] = "Plus") : "";
+    std::string language = s2[2] = s2[2].empty() ? (s2[2] = "Plus") : s2[2];
 
-    std::cout << s2[0] << s2[1] << s2[3] << std::endl;
+    std::cout << s2[0] << s2[1] << s2[2] << std::endl;
 
     return 0;
 }
