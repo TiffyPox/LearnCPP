@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 int main()
 {
@@ -37,6 +38,22 @@ int main()
     }
 
     std::cout << result << std::endl;
+
+    // adding a letter to the end of a word using a conditional operator
+
+    std::string s1 = "word";
+
+    std::string p1 = s1 + (s1[s1.size() - 1] == 's' ? "" : "s");
+
+    std::cout << p1 << std::endl;
+
+    // and again
+
+    std::vector<std::string> s2 = {"C", "Plus"};
+
+    std::string language = s2[3] = "" ? (s2[3] = "Plus") : "";
+
+    std::cout << s2[0] << s2[1] << s2[3] << std::endl;
 
     return 0;
 }
