@@ -51,7 +51,7 @@ int main()
 
     std::vector<std::string> s2 = {"C", "Plus", ""};
 
-    std::string language = s2[2] = s2[2].empty() ? (s2[2] = "Plus") : s2[2];
+    std::string language = s2[2].empty() == true ? (s2[2] = "Plus") : s2[2];
 
     std::cout << s2[0] << s2[1] << s2[2] << std::endl;
 
