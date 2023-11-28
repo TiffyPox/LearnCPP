@@ -6,7 +6,7 @@ int main()
     // prefix increments (or decrements) its operand and yields the changed object as its result
     // postfix yields a copy of the original, unchanged value as its result
 
-    int i = 5;
+    int i = 0;
     int j = 0;
 
     j = ++i; // j = 1, i = 1: prefix yields the incremented value
