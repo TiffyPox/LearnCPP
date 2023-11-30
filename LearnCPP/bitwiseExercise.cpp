@@ -16,5 +16,18 @@ int main()
 
     std::cout << status << std::endl; // result is 0 - student failed, otherwise, result is nonzero (i.e. true)
 
+    // what is the result of each of these expressions?
+
+    unsigned long ul1 = 3; // 00000011
+    unsigned long ul2 = 7; // 00000111
+
+    std::cout << (ul1 & ul2) << std::endl; // prints 3
+
+    std::cout << (ul1 | ul2) << std::endl; // prints 7
+
+    std::cout << (ul1 && ul2) << std::endl; // prints 1
+
+    std::cout << (ul1 || ul2) << std::endl; // prints 1
+
     return 0;
 }
