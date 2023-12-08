@@ -11,7 +11,7 @@ int main()
 
     // one common use for the comma operator is in a for loop:
 
-    std::vector<int> ivec{1, 2, 3, 4, 5};
+    std::vector<int> ivec{ 1, 2, 3, 4, 5 };
 
     std::vector<int>::size_type cnt = ivec.size();
 
@@ -23,7 +23,7 @@ int main()
     }
 
     // this loop increments ix and decrements cnt in the expression in the for header
-    // both ix and cnt are changed on each trip through the loops
+    // both ix and cnt are changed on each trip through the loop
 
     return 0;
 }
