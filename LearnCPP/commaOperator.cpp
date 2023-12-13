@@ -44,5 +44,31 @@ int main()
     * print the element the pointer points to (1, 2, 3, 4, 5)
     */
 
+   // explain the following expression:
+
+    int someValue = 10;
+    int x = 5;
+    int y = 5;
+
+    someValue ? ++x, ++y : --x, --y;
+
+    /*
+    * if someValue, increment x and y
+    * else, decrement x and y
+    */
+
+    // equivalent to:
+
+    if (someValue)
+    {
+        ++x;
+        ++y;
+    }
+    else
+    {
+        --x;
+        --y;
+    }
+
     return 0;
 }
