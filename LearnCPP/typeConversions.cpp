@@ -44,5 +44,16 @@ int main()
     usval + ival; // promotion depends on the size of unsigned short and int
     uival +ival; // conversion depends on the size of unsigned int and long
 
+    if (fval) // non-bool expression converted to bool
+    {
+        std::cout << "Hello World";
+    }
+
+    dval = fval + ival; // ival converted to float (6.5), float converted to double
+
+    double result = (dval + (ival * cval));
+
+    std::cout << result; // cval promoted to int, int converted to double (398.5)
+
     return 0;
 }
