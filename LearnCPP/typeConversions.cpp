@@ -55,5 +55,55 @@ int main()
 
     std::cout << result; // cval promoted to int, int converted to double (398.5)
 
+    // exercises continued ..
+
+    // (a)
+
+    char c = 'a';
+
+    c = 'b' + 2;
+
+    int d = c;
+
+    std::cout << c; // prints d
+
+    std::cout << d; // prints 100
+
+    // (b)
+
+    float f = 1.0f;
+    unsigned int ui = 1;
+    int i = 1;
+
+    f = (ui - (i * 1.0));
+
+    if (!f)
+    {
+        std::cout << "f is zero";
+    }
+
+    // (c)
+
+    double n1 = 3.2;
+    unsigned int n2 = 5;
+    float n3 = 5.5f;
+
+    n1 = n2 * n3;
+
+    std::cout << n1; // prints 27.5
+
+    // (d)
+
+    char let = 't';
+    int num = 3;
+    float flo = 4.0f;
+    double dub = 3.5;
+
+    let = num + flo + dub; 
+    
+    std::cout << let; // (10) prints a new line
+
+    std::cout << "This is a new line";
+
     return 0;
 }
