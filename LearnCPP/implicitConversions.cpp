@@ -15,7 +15,7 @@ int main()
     const int *n1 = 0; // a constant integral value of 0 can be converted to any pointer type
     n1 = &n;
 
-    std::cout << *n1;
+    std::cout << *n1 << std::endl;
 
     int nums[5] = {2, 4, 6, 8, 10};
     int* last = nums + 4;
@@ -23,7 +23,34 @@ int main()
 
     np = last; // literal nullptr can be converted to any pointer type
 
-    std::cout << *np;
+    std::cout << *np << std::endl;
+
+    int a = 20;
+    int* b = &a;
+    void* c = b; // a pointer to any nonconst type can be converted to void*
+
+    std::cout << *(int*)c << std::endl;
+    
+    const void* d = b; // a pointer to any type can be converted to a const void*
+
+    // conversions to bool:
+
+    // if the pointer or arithmetic value is zero, the conversions yields false; any other value yields true
+    char letter;
+
+    std::cin >> letter;
+    
+    char *cp = &letter;
+
+    if (cp) // true if the pointer cp is not zero
+    {
+        std::cout << "Hello World!" << std::endl;
+    }
+
+    while (*cp) // true if *cp is not the null character
+    {
+        std::cout << "Goodbye!" << std::endl;
+    }
 
     return 0;
 }
