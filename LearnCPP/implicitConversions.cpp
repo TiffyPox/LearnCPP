@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 int main()
 {
@@ -59,13 +60,16 @@ int main()
     const int *p = &i; // convert address of a nonconst to the address of a const
     // conversion from const to nonconst is not allowed
 
+    // Conversions defined by class types:
+
     std::string s = "a value"; // character string literal converted to type string
 
-    // equivalent to:
-    char s[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
-    std::string t = s;
+    std::string answer;
 
-    std::cout << t;
+    while (std::cin >> answer) // while condition converts cin to bool
+    {
+        std::cout << "The answer is: " << answer << std::endl;
+    }
 
     return 0;
 }
