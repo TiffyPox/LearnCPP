@@ -11,11 +11,11 @@ int main()
 
     // there are several other pointer conversions:
 
-    int n = 10;
-    const int *n1 = 0; // a constant integral value of 0 can be converted to any pointer type
-    n1 = &n;
+    int n1 = 10;
+    const int *n2 = 0; // a constant integral value of 0 can be converted to any pointer type
+    n2 = &n1;
 
-    std::cout << *n1 << std::endl;
+    std::cout << *n2 << std::endl;
 
     int nums[5] = {2, 4, 6, 8, 10};
     int* last = nums + 4;
@@ -51,6 +51,21 @@ int main()
     {
         std::cout << "Goodbye!" << std::endl;
     }
+
+    // Conversion to const:
+
+    int i;
+    const int &j = i; // convert a nonconst to a reference to a const int
+    const int *p = &i; // convert address of a nonconst to the address of a const
+    // conversion from const to nonconst is not allowed
+
+    std::string s = "a value"; // character string literal converted to type string
+
+    // equivalent to:
+    char s[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+    std::string t = s;
+
+    std::cout << t;
 
     return 0;
 }
