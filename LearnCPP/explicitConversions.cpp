@@ -6,8 +6,8 @@ int main()
     // Sometimes we want to explicitly force an object to be converted to a different type
     // We use a cast to request an explicit conversion
 
-    int i = 0;
-    int j = 0;
+    int i = 2;
+    int j = 5;
 
     // a static cast is useful when a larger arithmetic type is assigned to a smaller one
     double slope = static_cast<double>(j) / i; // <double> is the target type, (j) is the value to be cast
@@ -32,11 +32,11 @@ int main()
     * we can't use const_cast to change the type of an expression
     */
 
-   const char *cp;
-   // error: char *q1 = static_cast<char*>(cp); (static_cast can't cast away const)
+    const char *cp;
+    // error: char *q1 = static_cast<char*>(cp); (static_cast can't cast away const)
 
-   static_cast<std::string>(cp); // converts string literal to string
-   // error: const_cast<std::string>(cp); (const_cast only changes constness, NOT type)
+    static_cast<std::string>(cp); // converts string literal to string
+    // error: const_cast<std::string>(cp); (const_cast only changes constness, NOT type)
 
     return 0;
 }
