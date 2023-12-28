@@ -12,7 +12,6 @@ int main()
     std::cout << sum << std::endl;
 
     // rewrite each of the following old-style casts to use a named cast:
-
     int a;
     double b;
     const std::string *ps;
