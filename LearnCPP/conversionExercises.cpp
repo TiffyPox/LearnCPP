@@ -13,8 +13,8 @@ int main()
 
     // rewrite each of the following old-style casts to use a named cast:
 
-    int a = 5;
-    double b = 10;
+    int a;
+    double b;
     const std::string *ps;
     char *pc;
     void *pv;
@@ -22,13 +22,14 @@ int main()
     // pv = (void*)ps
     pv = const_cast<std::string*>(ps);
 
-    // i = int(*pc)
-    
+    // a = int(*pc)
+    a = static_cast<int>(*pc);
 
-    // pv = &d
+    // pv = &b
+    pv = static_cast<void*>(&b);
 
     // pc = (char*) pv
-
+    pc = static_cast<char*>(pv);
 
     return 0;
 }
