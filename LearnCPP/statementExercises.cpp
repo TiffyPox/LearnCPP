@@ -19,8 +19,7 @@ int main()
 
     for (int i = 1; i <= 10; num += i, ++i);
 
-    std::cout << "Sum of 1 to 10 inclusive is " << num << std::endl;                                
-    
+    std::cout << "Sum of 1 to 10 inclusive is " << num << std::endl;
 
     return 0;
 }
