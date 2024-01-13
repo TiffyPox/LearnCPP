@@ -36,11 +36,11 @@ int main()
 
     std::string::iterator iter = s.begin();
 
-    // while (iter != s.end())
-    // {
-    //     std::cout << *iter;
-    //     ++iter;
-    // }
+    while (iter != s.end())
+    {
+        std::cout << *iter;
+        ++iter;
+    }
 
     std::string::iterator iter2 = s.begin();
 
@@ -48,15 +48,17 @@ int main()
 
     int * winner;
 
-    while (int* winner = std::find(numbers, numbers + 4, 20))
+    while (int* winner = std::find(numbers, numbers + 4, 80))
     {
         if (winner != numbers + 4)
         {
-            std::cout << "Number not found";
+            std::cout << "\nNumber found";
+            return 0;
         }
         else
         {
-            std::cout << "Number found";
+            std::cout << "\nNumber not found";
+            return -1;
         }
     }
 
