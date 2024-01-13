@@ -42,8 +42,6 @@ int main()
         ++iter;
     }
 
-    std::string::iterator iter2 = s.begin();
-
     int numbers[] = {5, 10, 15, 20};
 
     int * winner;
