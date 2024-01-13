@@ -1,6 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <string>
+#include <vector>
 
 int main()
 {
@@ -51,13 +52,28 @@ int main()
         if (winner != numbers + 4)
         {
             std::cout << "\nNumber found";
-            return 0;
+            break;
         }
         else
         {
             std::cout << "\nNumber not found";
-            return -1;
+            break;
         }
+    }
+
+    std::vector<std::string> word = {"Pojke", "Garcon", "Boy", "Bachgen"};
+
+    std::vector<std::string>::iterator it;
+
+    it = std::find(word.begin(), word.end(), "Dreng");
+
+    if (it != word.end())
+    {
+        std::cout << "\n Word found" << std::endl;
+    }
+    else
+    {
+        std::cout << "\nWord not found" << std::endl;
     }
 
     return 0;
