@@ -1,4 +1,6 @@
 #include <iostream>
+#include <algorithm>
+#include <string>
 
 int main()
 {
@@ -29,6 +31,34 @@ int main()
     for (int i = 1; i <= 10; sum3 += i, ++i);
 
     std::cout << "Sum of 1 to 10 inclusive is " << sum3 << std::endl;
+
+    std::string s = "Hello World";
+
+    std::string::iterator iter = s.begin();
+
+    // while (iter != s.end())
+    // {
+    //     std::cout << *iter;
+    //     ++iter;
+    // }
+
+    std::string::iterator iter2 = s.begin();
+
+    int numbers[] = {5, 10, 15, 20};
+
+    int * winner;
+
+    while (int* winner = std::find(numbers, numbers + 4, 20))
+    {
+        if (winner != numbers + 4)
+        {
+            std::cout << "Number not found";
+        }
+        else
+        {
+            std::cout << "Number found";
+        }
+    }
 
     return 0;
 }
