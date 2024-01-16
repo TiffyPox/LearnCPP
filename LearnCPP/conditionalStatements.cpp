@@ -22,18 +22,29 @@ int main()
     }
     else
     {
-        letterGrade = scores[(grade - 50) / 10];
+        grade = std::max(50, grade);
+        int index = (grade - 50) / 10;
 
-        if (grade != 100)
+        if (index < scores.size())
         {
-            if (grade % 10 > 7)
+            letterGrade = scores[index];
+
+            if (grade != 100)
             {
-                letterGrade += '+';
+                if (grade % 10 > 7)
+                {
+                    letterGrade += '+';
+                }
+                else if (grade % 10 < 3)
+                {
+                    letterGrade += '-';
+                }
             }
-            else if (grade % 10 < 3)
-            {
-                letterGrade += '-';
-            }
+        }
+        else
+        {
+            std::cout << "Please enter a score less than or equal to 100" << std::endl;
+            return -1;
         }
     }
 
