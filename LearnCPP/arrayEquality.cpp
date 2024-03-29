@@ -1,4 +1,5 @@
 #include <iostream>
+
 #include <array>
 
 void iterateArray(std::array<int, 3> arr)
