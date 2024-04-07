@@ -1,4 +1,7 @@
 *.exe
 *.out
 *.txt
+*.obj
+*.pdb
+*.ilk
 builds
