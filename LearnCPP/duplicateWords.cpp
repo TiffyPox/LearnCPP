@@ -34,7 +34,15 @@ int main()
         }
     }
 
-    std::cout << "The word " << mostFrequent << " occurred " << count << " times" << std::endl;
+    // print the maximum number, or else print a message that no words were repeated
+    if (count == 1)
+    {
+        std::cout << "No words were repeated" << std::endl;
+    }
+    else
+    {
+        std::cout << "The word " << mostFrequent << " occurred " << count << " times" << std::endl;
+    }
 
     // The word cow occurred 4 times
 
