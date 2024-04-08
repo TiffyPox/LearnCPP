@@ -19,6 +19,8 @@ int main()
     while (std::cin >> word)
     {
         ++words[word];
+
+        std::cout << word << " ";
     }
 
     std::string mostFrequent;
@@ -37,11 +39,11 @@ int main()
     // print the maximum number, or else print a message that no words were repeated
     if (count == 1)
     {
-        std::cout << "No words were repeated" << std::endl;
+        std::cout << "\nNo words were repeated" << std::endl;
     }
     else
     {
-        std::cout << "The word " << mostFrequent << " occurred " << count << " times" << std::endl;
+        std::cout << "\nThe word " << mostFrequent << " occurred " << count << " times" << std::endl;
     }
 
     // The word cow occurred 4 times
