@@ -1,7 +1,6 @@
 #include <iostream>
-#include <cstdlib>
 #include <string>
-#include <vector>
+#include <map>
 
 int main()
 {
@@ -9,31 +8,35 @@ int main()
     // for example, if the input is how now now now brown cow cow
     // the output should indicate that the word now occurred three times
 
+    std::map<std::string, int> words;
+
     std::string word;
-
-    std::vector<std::string> words;
-
-    int count = 0;
 
     std::cout << "Please input a series of words each separated by a space" << std::endl;
 
+    // cow cow cow cow now now hi hi hi
+
     while (std::cin >> word)
     {
-        words.push_back(word); 
+        ++words[word];
+    }
 
-        for (auto i = words.begin(); i != words.end() - 1; ++i)
+    std::string mostFrequent;
+
+    int count = 0;
+
+    for (const auto& pair : words) 
+    {
+        if (pair.second > count)
         {
-            std::string temp = *i;
-            std::string next = *(i + 1);
-
-            if (temp == next)
-            {
-                count++;
-            }
+            count = pair.second;
+            mostFrequent = pair.first;
         }
     }
 
-    std::cout << "The word " << word << " occurred " << count << " times!" << std::endl;
+    std::cout << "The word " << mostFrequent << " occurred " << count << " times" << std::endl;
+
+    // The word cow occurred 4 times
 
     return 0;
 }
